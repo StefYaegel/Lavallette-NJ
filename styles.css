@@ -1,0 +1,225 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jacques+Francois+Shadow&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* nav {
+    margin-top: 7vh;
+    position: relative;
+    top: 16px;
+    left: 50%;
+    translate: -50%;
+    font-family: "Dancing Script", cursive;
+    font-size: 40px;
+} */
+
+header {
+    margin-top: 10vh;
+}
+
+h2, h3 {
+    font-family: "Dancing Script", cursive;
+}
+
+#about, #visit, #photos {
+    margin-top: 10vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    padding: 15px;
+}
+
+
+body {
+    background: rgb(252, 249, 216); 
+    text-align: center;
+    font-family: "Noto Serif", serif;
+    margin: 0;
+    color: rgb(17, 17, 38);
+}
+
+p {
+    margin: auto;
+    width: 650px; 
+    padding: 10px;
+    line-height: 170%;
+    font-size: 18px;
+}
+
+em {
+    font-family: "Dancing Script", cursive;
+    font-size: 30px;
+}
+
+ol, ul{
+    text-align: left;
+    font-size: 15px;
+    line-height: 170%;
+}
+
+ul {
+    list-style-type: '𓇼 ';
+}
+
+
+img{
+    /* height: 68vh; */
+    height: 45vh;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#gallery {
+    height: 45vh;
+    display: flex;
+    margin: 5px;
+}
+
+#snail_question {
+    /* width:430px; 
+    height: 250px; */
+    width:400px; 
+    height: 220px;
+    /* background-image: url(snailquestion.png); */
+    /* background-image: url(turtlequestion.png); */
+    background-image: url(rightturtlequestion.png);
+
+    background-size: cover;
+    transition: background-image 0.2s ease-in-out;
+    transition: scale .4s;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#snail_question:hover {
+    /* background-image: url(snailanswer.png); */
+    /* background-image: url(turtleanswer.png); */
+    background-image: url(rightturtleanswer.png);
+
+    scale: 1.1;
+}
+
+div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#cursorimg, #animated_shells_img {
+    height: 6vh;
+}
+
+h3 {
+    text-align: center;
+}
+
+#horizontal_text_align {
+    display:flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: -10px;
+    /* background-image: url(open_book.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 700px 450px;
+    padding: 90px; */
+}
+
+#vertical_text_align {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: fit-content;
+}
+
+#vertical_text_align h3 {
+    font-family: "Noto Serif", serif;
+}
+
+
+#vertical_image_align {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#horizontal_image_align{
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+#cursor {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    translate: -50% -50%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+#horizontal_activities_images {
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+}
+
+#images_activities {
+    display: flex;
+    transition: scale .4s;
+}
+
+#images_activities img {
+    width: 130px;
+    height: 130px;
+}
+
+#images_activities:hover{
+    scale: 1.25;
+}
+
+#animated_shell_line {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(-4px);
+    }
+    to {
+        transform: translateX(4px);
+    }
+  }
+
+
+#animated_shells_img {
+    translate: 0 0;
+    animation: move 1s infinite;
+    animation-direction: alternate;
+}
+
+#images {
+    display: flex;
+    transition: scale .4s;
+}
+
+#images:hover{
+    scale: 1.25;
+}
+
+
+footer {
+    /* margin-top: 300px; */
+    margin-top:50px;
+    margin-bottom: 35px;
+}
