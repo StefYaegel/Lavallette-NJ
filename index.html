@@ -21,6 +21,7 @@
       <img id="animated_shells_img" src="swirlyshell.png" alt="swaying swirly shell icon" /> 
     </div>
 
+
     <!-- <nav>
 
       <a href="#about">Home</a>
@@ -76,19 +77,19 @@
         <div id="horizontal_activities_images">
 
           <div id="images_activities" href="#"> 
-            <img id="gallery_notes" src="boogieboarding.png" alt="pink sticky note clipart that says boogie boarding" />
+            <img id="boogie_note" src="boogieboarding.png" alt="pink sticky note clipart that says boogie boarding" />
           </div>
 
           <div id="images_activities" href="#"> 
-            <img id="gallery_notes" src="pickleball2.png" alt="pink sticky note clipart that says bayside pickleball" />
+            <img id="pickleball_note" src="pickleball2.png" alt="pink sticky note clipart that says bayside pickleball" />
           </div>
 
           <div id="images_activities" href="#"> 
-            <img id="gallery_notes" src="sunriseyoga.png" alt="pink sticky note clipart that says sunrise yoga" />
+            <img id="sunriseyoga_note" src="sunriseyoga.png" alt="pink sticky note clipart that says sunrise yoga" />
           </div>
 
           <div id="images_activities" href="#"> 
-            <img id="gallery_notes" src="minigolf2.png" alt="pink sticky note clipart that says mini golf" />
+            <img id="minigolf_note" src="minigolf2.png" alt="pink sticky note clipart that says mini golf" />
           </div>
 
           </div>
@@ -96,19 +97,19 @@
           <div id="horizontal_activities_images">
 
           <div id="images_activities" href="#"> 
-            <img id="gallery_notes" src="sandcastle.png" alt="pink sticky note clipart that says sand castle making" />
+            <img id="sandcastle_note" src="sandcastle.png" alt="pink sticky note clipart that says sand castle making" />
           </div>
 
           <div id="images_activities" href="#"> 
-            <img id="gallery_notes" src="watersport.png" alt="pink sticky note clipart that says watersports" />
+            <img id="watersport_note" src="watersport.png" alt="pink sticky note clipart that says watersports" />
           </div>
 
           <div id="images_activities" href="#"> 
-            <img id="gallery_notes" src="shellpainting2.png" alt="pink sticky note clipart that says seashell painting" />
+            <img id="shellpainting_note" src="shellpainting2.png" alt="pink sticky note clipart that says seashell painting" />
           </div>
 
           <div id="images_activities" href="#"> 
-            <img id="gallery_notes" src="grandcentral.png" alt="pink sticky note clipart that says shopping on Grand Central" />
+            <img id="grandcentral_note" src="grandcentral.png" alt="pink sticky note clipart that says shopping on Grand Central" />
           </div>
 
         </div>
@@ -118,8 +119,6 @@
     </section>
 
     <div style="margin-top: 70px" id="snail_question"></div>
-    <!-- title= "turtle with a speech bubble that asks the question, why take my word for it,
-    and responds saying, I have 20+ summers of experience and countless memories in Lava."  -->
 
     <section id="photos">
 
@@ -129,29 +128,29 @@
       <div id="vertical_image_align">
         <div id="horizontal_image_align"> 
           <div id="images" href="#"> 
-            <img id="gallery" src="happybelly.png" alt="image of flowers in a small garden in front of a cafe." />
+            <img id="gallery_left" src="newhappybelly.png" alt="image of flowers in a small garden in front of a cafe." />
           </div>
 
           <div id="images" href="#"> 
-            <img id="gallery" src="thebay.png" alt="image of a kayak on the sand overlooking the sun setting on the Lavallette bay." />
+            <img id="gallery_middle" src="newbay.png" alt="image of a kayak on the sand overlooking the sun setting on the Lavallette bay." />
           </div>
 
           <div id="images" href="#"> 
-            <img id="gallery" src="pickashell.png" alt="image of hand painted shells with a sign that reads pick a shell, paint a shell, and bring back to display." />
+            <img id="gallery_right" src="newpaintashell.png" alt="image of hand painted shells with a sign that reads pick a shell, paint a shell, and bring back to display." />
           </div>
         </div>
 
         <div id="horizontal_image_align"> 
           <div id="images" href="#"> 
-            <img id="gallery" src="boardwalkstrolls.png" alt="image of the Lavallette boardwalk and some houses and dunes that surround it." />
+            <img id="gallery_left" src="newboardwalkstrolls.png" alt="image of the Lavallette boardwalk and some houses and dunes that surround it." />
           </div>
 
           <div id="images" href="#"> 
-            <img id="gallery" src="Hazelboutique.png" alt="image of the outside of Hazel Boutique with a bicycle, lamp post, and large ice cream sign." />
+            <img id="gallery_middle" src="newhazelboutique.png" alt="image of the outside of Hazel Boutique with a bicycle, lamp post, and large ice cream sign." />
           </div>
 
           <div id="images" href="#"> 
-            <img id="gallery" src="beachview.png" alt="image from the dunes facing the sand and ocean on President Ave Beach." />
+            <img id="gallery_right" src="newoceanviews.png" alt="image from the dunes facing the sand and ocean on President Ave Beach." />
           </div>
 
         </div>
@@ -183,16 +182,10 @@
     <script>
 
       function move(event){
-        if (event.x >= 725){
-          // document.getElementById("cursorimg").src= "turtle_cursor2.png";
+        if (event.x >= window.innerWidth / 2){
           document.getElementById("cursorimg").src= "fish.png";
-
-        }
-
-        if (event.x < 725){
-          // document.getElementById("cursorimg").src= "turtle_cursor1.png";
+        } else {
           document.getElementById("cursorimg").src= "fish2.png";
-
         }
 
         cursor.style.left = event.x + "px";
@@ -201,6 +194,80 @@
       }
 
       window.onmousemove = move;
+
+      // logic for swapping out note cards with bubble and non-bubble versions (hover states)
+
+      // boogie boarding 
+      document.getElementById('boogie_note').addEventListener('mouseover', () => {
+          document.getElementById('boogie_note').src = 'boogiebubble.png'; 
+      });
+
+      document.getElementById('boogie_note').addEventListener('mouseout', () => {
+          document.getElementById('boogie_note').src = 'boogieboarding.png'; 
+      });
+      
+      // pickleball
+      document.getElementById('pickleball_note').addEventListener('mouseover', () => {
+          document.getElementById('pickleball_note').src = 'pickleballbubble.png'; 
+      });
+
+      document.getElementById('pickleball_note').addEventListener('mouseout', () => {
+          document.getElementById('pickleball_note').src = 'pickleball2.png'; 
+      });
+
+      // yoga
+      document.getElementById('sunriseyoga_note').addEventListener('mouseover', () => {
+          document.getElementById('sunriseyoga_note').src = 'yogabubble.png'; 
+      });
+
+      document.getElementById('sunriseyoga_note').addEventListener('mouseout', () => {
+          document.getElementById('sunriseyoga_note').src = 'sunriseyoga.png'; 
+      });
+
+      // golf 
+      document.getElementById('minigolf_note').addEventListener('mouseover', () => {
+          document.getElementById('minigolf_note').src = 'golfbubble.png'; 
+      });
+
+      document.getElementById('minigolf_note').addEventListener('mouseout', () => {
+          document.getElementById('minigolf_note').src = 'minigolf2.png'; 
+      });
+
+      // sand castle  
+      document.getElementById('sandcastle_note').addEventListener('mouseover', () => {
+          document.getElementById('sandcastle_note').src = 'sandcastlebubble.png'; 
+      });
+
+      document.getElementById('sandcastle_note').addEventListener('mouseout', () => {
+          document.getElementById('sandcastle_note').src = 'sandcastle.png'; 
+      });
+
+      // water sports 
+      document.getElementById('watersport_note').addEventListener('mouseover', () => {
+          document.getElementById('watersport_note').src = 'watersportsbubble.png'; 
+      });
+
+      document.getElementById('watersport_note').addEventListener('mouseout', () => {
+          document.getElementById('watersport_note').src = 'watersport.png'; 
+      });
+
+      // shell painting
+      document.getElementById('shellpainting_note').addEventListener('mouseover', () => {
+          document.getElementById('shellpainting_note').src = 'shellpaintingbubble.png'; 
+      });
+
+      document.getElementById('shellpainting_note').addEventListener('mouseout', () => {
+          document.getElementById('shellpainting_note').src = 'shellpainting2.png'; 
+      });
+
+      // grand central  
+      document.getElementById('grandcentral_note').addEventListener('mouseover', () => {
+          document.getElementById('grandcentral_note').src = 'shoppingbubble.png'; 
+      });
+
+      document.getElementById('grandcentral_note').addEventListener('mouseout', () => {
+          document.getElementById('grandcentral_note').src = 'grandcentral.png'; 
+      });
 
     </script>
 
