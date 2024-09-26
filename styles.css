@@ -36,16 +36,16 @@ a {
 
 
 body {
-    background: rgb(252, 249, 216); 
+    background: rgb(250, 247, 219); 
     text-align: center;
     font-family: "Noto Serif", serif;
     margin: 0;
-    color: rgb(17, 17, 38);
+    color: rgb(0, 0, 0);
 }
 
 p {
     margin: auto;
-    width: 650px; 
+    width: 45%; 
     padding: 10px;
     line-height: 170%;
     font-size: 18px;
@@ -68,28 +68,23 @@ ul {
 
 
 img{
-    /* height: 68vh; */
     height: 45vh;
     display: flex;
     margin-left: auto;
     margin-right: auto;
 }
 
-#gallery {
+/* all galleries */
+#gallery_left, #gallery_middle, #gallery_right {
     height: 45vh;
     display: flex;
     margin: 5px;
 }
 
 #snail_question {
-    /* width:430px; 
-    height: 250px; */
-    width:400px; 
-    height: 220px;
-    /* background-image: url(snailquestion.png); */
-    /* background-image: url(turtlequestion.png); */
+    width: 60vh;
+    height: 35vh;
     background-image: url(rightturtlequestion.png);
-
     background-size: cover;
     transition: background-image 0.2s ease-in-out;
     transition: scale .4s;
@@ -98,10 +93,7 @@ img{
 }
 
 #snail_question:hover {
-    /* background-image: url(snailanswer.png); */
-    /* background-image: url(turtleanswer.png); */
     background-image: url(rightturtleanswer.png);
-
     scale: 1.1;
 }
 
@@ -124,11 +116,6 @@ h3 {
     justify-content: center;
     gap: 100px;
     margin-top: -10px;
-    /* background-image: url(open_book.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 700px 450px;
-    padding: 90px; */
 }
 
 #vertical_text_align {
@@ -177,13 +164,13 @@ h3 {
 }
 
 #images_activities img {
-    width: 130px;
-    height: 130px;
+    width: 20vh;
+    height: 20vh;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
-#images_activities:hover{
-    scale: 1.25;
-}
 
 #animated_shell_line {
     margin-top: 20px;
@@ -206,6 +193,8 @@ h3 {
     translate: 0 0;
     animation: move 1s infinite;
     animation-direction: alternate;
+    animation-direction: right;
+
 }
 
 #images {
@@ -217,9 +206,19 @@ h3 {
     scale: 1.25;
 }
 
+#gallery_left:hover{
+    transform: rotate(-6deg);
+}
+
+#gallery_middle:hover{
+    transform: rotate(-1deg);
+}
+
+#gallery_right:hover{
+    transform: rotate(6deg);
+}
 
 footer {
-    /* margin-top: 300px; */
     margin-top:50px;
     margin-bottom: 35px;
 }
